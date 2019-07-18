@@ -1,0 +1,20 @@
+spring:
+    datasource:
+#        url: jdbc:mysql://${db_ip}:${port}/${db_name}?seUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+        url: jdbc:mysql:///sakila?seUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+        username: root
+        password: admin123
+        driver-class-name: ${driver}
+    jpa:
+        database: mysql
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        show-sql: false
+        hibernate:
+            ddl-auto: update
+            format_sql: true
+    context:
+        listener:
+            classes: com.hand.al.exam1.listener.MyListener
+title: Hand
+description: com.Hand
+language_id: 1
